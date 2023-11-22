@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/travelagency_demo/static/css/main.3b3a5312.css",
-    "main.js": "/travelagency_demo/static/js/main.829a3fba.js",
+    "main.css": "/travelagency_demo/static/css/main.c30bee36.css",
+    "main.js": "/travelagency_demo/static/js/main.66116779.js",
+    "static/media/homebg.png": "/travelagency_demo/static/media/homebg.326bdaa3585b2dc2259e.png",
     "index.html": "/travelagency_demo/index.html",
-    "main.3b3a5312.css.map": "/travelagency_demo/static/css/main.3b3a5312.css.map",
-    "main.829a3fba.js.map": "/travelagency_demo/static/js/main.829a3fba.js.map"
+    "static/media/search_ico.svg": "/travelagency_demo/static/media/search_ico.b6b84b704523b6af18d94d0ab16e21f0.svg",
+    "main.c30bee36.css.map": "/travelagency_demo/static/css/main.c30bee36.css.map",
+    "main.66116779.js.map": "/travelagency_demo/static/js/main.66116779.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b3a5312.css",
-    "static/js/main.829a3fba.js"
+    "static/css/main.c30bee36.css",
+    "static/js/main.66116779.js"
   ]
 }
