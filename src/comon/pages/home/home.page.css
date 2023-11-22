@@ -1,0 +1,6 @@
+.home-page-baner {
+    height: 100vh;
+    background-image: url('../../images/homebg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

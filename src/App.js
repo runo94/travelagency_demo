@@ -1,10 +1,12 @@
 import './App.css';
-import { Header } from './comon/layouts/header/header.layout';
+import { Navigation } from './comon/components/navigation/navigation.component';
+import Home from './comon/pages/home/home.page';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Navigation headerBg="transparent" />
+      <Home />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-const navigation = [
+const navigationList = [
     { name: 'Dashboard', href: '#', current: true },
     { name: 'Team', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
@@ -13,12 +13,15 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export const Header = () => {
+export const Navigation = (props) => {
+    const { headerBg } = props;
     return (
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className={classNames(
+            !headerBg && 'bg-gray-800',
+            'absolute w-screen justify-center')}>
             {({ open }) => (
                 <>
-                    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl px-2 sm:px-6 lg:px-8 mx-auto">
                         <div className="relative flex h-16 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
@@ -32,7 +35,7 @@ export const Header = () => {
                                     )}
                                 </Disclosure.Button>
                             </div>
-                            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
                                 <div className="flex flex-shrink-0 items-center">
                                     <img
                                         className="h-8 w-auto"
@@ -42,7 +45,7 @@ export const Header = () => {
                                 </div>
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4">
-                                        {navigation.map((item) => (
+                                        {navigationList.map((item) => (
                                             <a
                                                 key={item.name}
                                                 href={item.href}
@@ -63,7 +66,7 @@ export const Header = () => {
 
                     <Disclosure.Panel className="sm:hidden">
                         <div className="space-y-1 px-2 pb-3 pt-2">
-                            {navigation.map((item) => (
+                            {navigationList.map((item) => (
                                 <Disclosure.Button
                                     key={item.name}
                                     as="a"
