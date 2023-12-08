@@ -18,12 +18,12 @@ export const BookingSearch = () => {
     const [endDate, SetEndDate] = useState(new Date().toLocaleDateString())
 
     return (
-        <div className="mx-auto max-w-full flex justify-between bg-slate-50 px-8 py-10 rounded-b-3xl rounded-tr-3xl">
+        <div className="mx-auto max-w-full flex justify-between bg-white px-8 py-10 rounded-b-3xl rounded-tr-3xl">
             <div className={'from-to flex justify-between items-center border-2 rounded-2xl p-10 border-gray-300 bg-white'}>
                 <div className="from text-left w-28">
-                    <lavel className="text-sm text-gray-400">
+                    <label className="text-sm text-gray-400">
                         Living from
-                    </lavel>
+                    </label>
                     <p className="text-md font-semibold text-gray-900">{from}</p>
                 </div>
 
@@ -57,7 +57,7 @@ export const BookingSearch = () => {
                     <p className="text-md font-semibold text-gray-900">{endDate}</p>
                 </div>
             </div>
-            <button className="big-search bg-indigo-500 hover:bg-indigo-400 rounded-8xl p-10">
+            <button className="big-search bg-blue-500 hover:bg-blue-400 rounded-8xl p-10">
                 <img src={searchIco} alt="search" />
             </button>
         </div>
