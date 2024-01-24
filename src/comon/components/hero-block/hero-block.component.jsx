@@ -8,7 +8,7 @@ export const HeroBlock = () => {
     return (
         <div className="flex justify-between items-center">
             <div className="w-7/12">
-                <img className="rounded-8xl" src="/travelagency_demo/unsplash_tQpypKA92k8.png" />
+                <img className="rounded-8xl" src={process.env.PUBLIC_URL + "/assets/unsplash_tQpypKA92k8.png"} />
             </div>
 
             <div className="w-5/12 text-start">

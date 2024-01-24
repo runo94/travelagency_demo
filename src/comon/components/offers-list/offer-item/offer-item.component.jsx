@@ -1,22 +1,21 @@
-
-export const OfferItem = () => {
+export const OfferItem = ({image, badge, date, booking_info, title, price}) => {
     return (
-        <div className="shadow-card py-4 pl-4 pr-1 rounded-4xl">
+        <div className="shadow-card py-4 pl-4 pr-1 rounded-4xl max-w-xs">
             <div className="flex justify-between">
-                <img src="/travelagency_demo/unsplash_7uXn7nudorc.png" className="rounded-8xl" />
-                <p className="vertical-rl">14 FEB 2022</p>
+                <img src={process.env.PUBLIC_URL + image} className="rounded-8xl" />
+                <p className="vertical-rl">{date}</p>
             </div>
             <div className="flex justify-start my-3 mx-5">
                 <span className="inline-flex items-center rounded-full bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
-                    Badge
+                    {badge}
                 </span>
 
-                <span className="mx-3">4 Days, 3 Nights</span>
+                <span className="mx-3">{booking_info}</span>
             </div>
-            <h3 className="text-lg font-bold text-start ml-3">Ansgar Scheffold</h3>
+            <h3 className="text-lg font-bold text-start ml-3">{title}</h3>
             <div className="ml-3 mr-6 flex justify-between">
                 <p className="font-semibold text-start text-base text-slate-400">
-                    <span className="text-lg text-start text-slate-600">400$</span>/Person 
+                    <span className="text-lg text-start text-slate-600">{price}$</span>/Person 
                 </p>
 
                 <a href="#" className="inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 hover:bg-indigo-100">Book Now</a>
