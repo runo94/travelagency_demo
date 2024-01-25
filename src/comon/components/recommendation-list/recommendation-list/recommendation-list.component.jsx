@@ -1,12 +1,9 @@
 import { RecommendationItem } from "../recommendation-item/recommendation-item.component"
 
-export const RecommendationList = () => {
+export const RecommendationList = (recommendations) => {
     return (
         <div className="grid grid-cols-4 gap-4">
-            <RecommendationItem />
-            <RecommendationItem />
-            <RecommendationItem />
-            <RecommendationItem />
+            {Object.values(recommendations).map((recomendation) => <RecommendationItem  {...recomendation} />)}
         </div>
     )
 }

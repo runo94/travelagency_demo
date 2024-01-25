@@ -1,10 +1,10 @@
-import offers from '../../../../mocks/offers.json'
 import { OfferItem } from "../offer-item/offer-item.component"
 
-export const OfferList = () => {
+export const OfferList = (offers) => {
+    
     return (
         <div className="grid grid-cols-3 gap-4">
-            {offers.map(({ ...offer }) => {
+            {Object.values(offers).map(({ ...offer }) => {
                 return <OfferItem {...offer} />
             })}
         </div>
